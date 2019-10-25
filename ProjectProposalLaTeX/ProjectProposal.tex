@@ -9,10 +9,16 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage[table]{xcolor}
 \usepackage{hyperref}
+\usepackage{parskip}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
 \theoremstyle{definition}
 \newtheorem{example}{Example}
+\newenvironment{summarize}{%
+   \setlength{\parindent}{0pt}
+   \itshape
+   \color{black}
+}{}
 
 \newenvironment{explanation}{%
    \setlength{\parindent}{0pt}
@@ -20,13 +26,12 @@
    \color{blue}
 }{}
 
-\newcommand{\projectname}{Template}
-\newcommand{\productname}{School Health Service Assistant}
-\newcommand{\projectleader}{A. Leeb}
+\newcommand{\projectname}{My Informatics World - Deep Space Simulation}
+\newcommand{\projectleader}{K. Mohammed}
 \newcommand{\documentstatus}{In process}
 %\newcommand{\documentstatus}{Submitted}
 %\newcommand{\documentstatus}{Released}
-\newcommand{\version}{V. 1.0}
+\newcommand{\version}{V. 1.6}
 
 \begin{document}
 \begin{titlepage}
@@ -38,9 +43,9 @@
 
 \begin{center}
 {\Huge Project Proposal} \\[3em]
-{\LARGE \productname} \\[3em]
+\includegraphics[scale=.5]{myw.PNG}\\
 \end{center}
-
+\hfill \break
 \begin{flushleft}
 \begin{tabular}{|l|l|}
 \hline
@@ -56,7 +61,12 @@ Version & \version \\ \hline
 \begin{tabular}{|l|l|l|}
 \hline
 \cellcolor[gray]{0.5}\textcolor{white}{Date} & \cellcolor[gray]{0.5}\textcolor{white}{Author} & \cellcolor[gray]{0.5}\textcolor{white}{Change} \\ \hline
-November 03, 2011&P. Bauer/T. Stütz&First version \\ \hline
+October 14, 2019&K. Mohammed/L. Bochis/A. Doenmez&First version \\ \hline
+October 18, 2019&K. Mohammed/L. Bochis/A. Doenmez&Second version \\ \hline
+October 21, 2019&K. Mohammed/L. Bochis/A. Doenmez&Third version \\ \hline
+October 22, 2019&K. Mohammed/L. Bochis/A. Doenmez&Fourth version \\ \hline
+October 24, 2019&K. Mohammed/L. Bochis/A. Doenmez&Fifth version \\ \hline
+October 25, 2019&K. Mohammed/L. Bochis/A. Doenmez&Sixth version \\ \hline
 \end{tabular}
 \pagebreak
 
@@ -64,120 +74,159 @@ November 03, 2011&P. Bauer/T. Stütz&First version \\ \hline
 \pagebreak
 
 \section{Introduction}
-\begin{explanation}
-The management bases the decision to approve a project within the scope of a Project Progress Decision of the Decision Gate Project Approved on the project proposal, which is not prepared within the framework of the V-Model. Based on a project or system idea, the acquirer systematically describes the necessity of a project based on feasibility, affordability, market, and economic efficiency criteria.
-The project proposal processes subjects like the initial situation, existing framework conditions, project objectives and system concepts, chances and risks, and the economic efficiency.
+Many people are negatively biased about software developers. The idea that programmers spend their time in their dark isolated room with plenty of energy drinks, having no social abilities and contacts is simply not true. We want to change this stigma.
 
-All written text in this color is explanatory and has to be deleted when the document is released. The example given here is only a skeleton. Your text has to be more elaborate and explanatory.
-\end{explanation}
+This project should show people, that being a programmer can be pretty interesting and that it requires similar skills like in any other job. As a programmer, you always stay in touch with other colleagues and people. That is the reason why soft skills are very important in this field of work.
+
+To change the stigma about programmers we want to create a Deep Space simulation and publish it in the Ars Electronica Center. By publishing the project, many people will get in touch with the subject "Computer Science" and they will actually see how cool it can be to be a computer scientist. The Project will show them, what a group of software developers are capable to create and which great opportunities you have in a job in software development.
+
+
 \pagebreak
 
 \section{Initial Situation}
-\begin{explanation}
-The initial situation presents the assessment of the actual situation of an organizational unit or the entire organization of an agency or company. Thus a need for action, which may lead to a product or system vision, is recognizable. The vision may be developed into a project idea. The need for action may be initiated by several project or system ideas.
-The demonstration of capability gaps (i.e. the difference between the necessary planned capabilities and the actually existing capabilities) in a company or agency may clearly show an urgent need for action in order to increase the efficiency or reduce costs. This need for action is presented as product or system idea, leading frequently to a concrete project proposal. Correspondingly, the determination of the requirement to renew or improve a "technically obsolete" system (so-called "system regeneration") or the recognition of market chances for a new product or system may lead to a project idea. The applicable data must be developed for the project proposal.
-Research programs or studies may also be the basis for project ideas; they will be concretized in a project proposal.
+\textbf{Explanation of Deep Space}\newline
+The Ars Electronica Center is a technical museum in Linz. It has a room, that is called "deep space", which has a 16x9 meter wall projection, a floor projection of the same size and laser tracking. The deep space is capable of illustrating complex 2- and 3-dimensional simulations in 8k resolution. Guides have control over the simulation and lead the viewers through the simulation.
 
-The basic question could be summarized in German as follows:
-\begin{itemize}
-	\item Die Ist-Fähigkeiten der Organisation (was können wir?)
-	\item Die Soll-Fähigkeiten der Organisation (was wollen wir können?)
-	\item Ein Soll-Ist-Fähigkeitenvergleich (wo liegen die Defizite?)
-	\item Ein Fähigkeitsvergleich nach vorgegebenen Bewertungskriterien
-\end{itemize}
-\end{explanation}
+A lower grade Student, that is interested in computer science and technology, might find it very hard to get information and a basic overview of that field, because you need an existing knowledge to find information about computer science. 
 
-\begin{example}
-A doctor in a (primary) school examines the primary school students periodically. (S)he must report the results of this examinations and inform parents about medical defects. Sometimes the doctor has to refer students in problematic health condition to specialists.
+To abolish this problem there will be an event called "My Informatics World" that will likely be organized by the HTL Leonding, the FH Hagenberg, the CoderDojo Linz, the HTL Perg, the HTL Grieskirchen, the JKU, Company Partners and the Ars Electronica Center. The goals of "My Informatics World" are \textbf{"represent the predominant communicative and creative parts of the computer science professions"}, \textbf{"show the manifold possibilities in the Upper Austrian central area to learn computer science and to earn a living with a profession in computer science"} and \textbf{"To make the teaching of computer science at primary and lower secondary level attractive to teachers and instructors and to show them ways of supporting them in this process."}.
 
-The creation of the paperwork is time-consuming since the health data collected during the examinations has to be edited several times (once for the reports, once for the parents information, once for referral, etc. The information retrieval concerning the medical history of students is also time-consuming. The time spent on this work would be better used on direct contact time with students.
-
-The documentation of the examinations can be automated. So the reports and further documents will be generated. The medical history will be persisted automatically.
-\end{example}
+The event will take place in the the Ars Electronica Center. Interested students will be able go into the deep space, that is located in the Ars Electronica Center, and get a brief overview about software engineering and how computer works.
 
 \pagebreak
 
 \section{General Conditions and Constraints}
-\begin{explanation}
-This subject describes the framework conditions to be observed by all stakeholders when the project idea is implemented into concrete measures for realizing the system. Framework conditions, e.g., budget situation, existing know-how, legal provisions, cooperations, commitment to partners and deadlines, may be turned into specifications for project execution.
-Technical framework conditions, e.g., development environments and platforms, IT infrastructure, applicable standards and regulations, or specifications of off-the-shelf products, lead to additional (non-functional) requirements for system development.
-\end{explanation}
 
-\begin{example}
 The proposed system has to the deal with the following constraints:
 \begin{itemize}
-\item The information about the medical condition of the pupils is strictly confidential.
-\item The GUI of the information system must be intuitive.
-\item The application must have a small footprint and a local database.
-\item A backup concept is mandatory
-\item The application is multi-language capable (english and german)
+\item The model should look smooth and not complicated. 
+\item The simulation should be fully controllable by the guides and only by the guides.
+\item The simulation should be comprehensible for every age group, especially young students and their parents.
+\item The simulation should be objective towards information and should not favor a certain school, although it was created by students of the HTL Leonding.
+\item Perspective change through guide control (bird-eye view, first and third person).
 \end{itemize}
-\end{example}
-
 \pagebreak
 
 \section{Project Objectives and System Concepts}
-\begin{explanation}
-In the Subject Project Objectives and System Concepts, the acquirer describes his vision of a new project or system on a high abstraction level. Project objectives and system concepts may concern several aspects, e.g., the introduction of innovations, the definition of objectives (quality, deadline and cost objectives), the operation of the system in its operating environment and the use of new, improved functionalities.
-\end{explanation}
 
-\begin{example}
-The project objectives can be summarized as follows:
+\textbf{System Concepts:}
 \begin{itemize}
-\item The doctor is documenting the examination results while examining the students
-\item Input form assists her/him to input information in a structured and easy way
-\item Common situations (need for vaccinations, check for need of dental brace, etc.) are a one-click-job for the doctor
-\item Info sheet for parents can be printed right after examination
-\item Report is a one-click-job at the end of the day
+\item{\textbf{Messenger Service}}\newline
+How does a messenger work?\newline
+How is the network structured?\newline
+What happens in the back-end of a messenger?
+
+This concept should explain how the communication between two or more persons works. It will visualize, how a message package is structured and how a message package is sent from one person to another with a message server in between.
+\item{\textbf{Online Video Game}}\newline
+What happens on the server of a multiplayer game? \newline
+How is the network structured?
+
+People often play video games without knowing what the computer does while they play. This simulation should give them a brief overview of the components that work together during a game. The simulation should visualize, how a connection to server is established and how gamer can play a multiplayer game on a server.
+\item\textbf{Inside a Computer}\newline
+What is inside a computer and how does it's components work? \newline
+What components are in a CPU?\newline
+How does a CPU work and how does it run programs?\newline
+What is Assembler?\newline
+
+This concept should give a brief overview of the core technologies of the Computer. The main focus will be the central processing unit. It will explain the different parts of the CPU and explain how they interact with each other. It will explain how an abstracted form of machine code is executed and how the CPU handles it.
+
+\pagebreak
+\item\textbf{Programming Language}\newline
+What is a programming language?\newline
+How does a programming language work?\newline
+How is a programming language translated into machine code?
+
+This concept should explain how an advanced programming language works and what it is. It should give a few simple examples and explain how it is converted to a language that the computer understands. An advanced programming language is easier to understand for humans because it is uses complex abstract concepts that a human can understand easier than a Computer. Because of this a higher level programming language can be compiled to a language that is understandable for computer but not for humans. 
+
+\item\textbf{How does memory work}\newline
+How does the computer dispense its memory capacity?\newline
+How does a HDD store data?\newline
+How can data be reached?\newline
+How is data structured?\newline
+What is the difference between HDD and SSD?\newline
+
+This concept should explain what data is and how data is abstracted to zeros and ones. It should explain how a computer handles data and what a computer does to store it. It should explain how the hard drive disk stores data and processes incoming data. The simulation should also show the differences of the functionalities between HDD and SSD.
+
+\end {itemize}
+
+\pagebreak
+
+{\textbf{Project objectives}}\newline
+The main objective of "{\projectname}" is to provide an overview of the technology branch, especially informatics, for people of different age. Upon viewing the simulation, spectators should be able to understand code realization and the history of specific software handlings. The simulation should not rely on the know-how that already exists.\newline
+
+\textbf{\projectname} focuses on people with different ages, especially for students at the lower-school level and their parents, for that matter we have to secure these enumerations:
+
+\begin{itemize}
+    \item The template is supposed to look seamless and not hard.
+    \item For each age group, especially young students and their parents, the simulation should be understandable.
 \end{itemize}
-\end{example}
 
 \pagebreak
 \section{Opportunities and Risks}
-\begin{explanation}
-The Subject Opportunities and Risks comprises data which are normally prepared in industrial business plans. Frequently, an anonymous market with potential acquirers, which could be interested in the new product or system idea, will be analyzed at first. Therefore, the contents of this subject is characterized by a certain uncertainty or fuzziness. The subjects examines the chances of achieving profit on the market with a specific product or system. In addition to the chances, the risks of failing on the market or sustaining losses with a product or system should be analyzed.
-\end{explanation}
 
-\begin{example}
-The project has the following opportunities:
+\textbf{The project has the following opportunities:}
 \begin{itemize}
-\item The doctor is able to increase his time with his patients.
-\item The time for bureaucratic work declines.
-\item The quality will increase
-\end{itemize}
+\item The project will show people that software engineering is something special and will help reducing the stigma of software engineers. 
+\item The project gives real working experience. 
+\item The project will be used.
+\item The project can lead to new connections in the IT sector.   
+\item Because of entering in new parts of the IT world we can acquire a lot of knowledge about technologies that are new for us.
+\end{itemize} 
 
-The following risk have to be taken into account.
+\textbf{The following risk have to be taken into account:}
 \begin{itemize}
-\item Data transfer of studentsÕ master data from legacy systems is problematic.
-\item There is no information about the legacy systems and their data structure.
-\item Further there is no information, whether the staff is capable and willing to supply the students master data (names, classes, ...).
+\item \textbf{Expectation risk:} Because the project will be used and viewed by real People it has to fulfill many expectations.
+\item \textbf{Schedule risk:} The schedule will be strict because we have to comply with the management and expectations of the AEC.
+\item \textbf{Performance risk:} The project will not produce results that are consistent with the project specifications.
+\item \textbf{Enough Live-testing:} To see the result on the deep space, short time for live testing is one of the big risks.
 \end{itemize}
-
-\end{example}
 
 \pagebreak
 \section{Planning}
-\begin{explanation}
-The planning specifies the organizational and commercial project execution and system development aspects. The project organization, e.g., matrix organization and steering committees, and the responsibilities for the decision-making processes within project will be specified.
-The Project Leader will be appointed, his tasks will be defined. Available resources, funds and specialist personnel will be determined. Start and end date for the project will be specified. The planning can be based on the statements developed in the subject Project Objectives and System Concepts, which makes additional statements on feasibility, funding and schedules.
 
-The following parts must be included:
+\textbf{Milestones:}
+\newline
+
+\begin{tabular}{|l|l|}
+\hline
+\cellcolor[gray]{0.5}\textcolor{white}{Due Date} & \cellcolor[gray]{0.5}\textcolor{white}{Milestone} \\ \hline
+November 12, 2019&Working programming environment \\ \hline
+November 26, 2019&First steps in Unity\\ \hline
+January 17, 2019&First prototype of planned Simulation \\ \hline
+March 10, 2020&Working Simulation \\ \hline
+March 17, 2020&First live test in deep space\\ \hline
+March 21, 2020&Running Simulation with good design\\ \hline
+\end{tabular}
+
+
+\textbf{Project roles:}
 \begin{itemize}
-\item List of major project milestones.
-\item Assign project lead and other outstanding roles to team members.
-\item Give a rough estimate how many resources you need (human resources, licenses, servers, etc.)
+    \item Kevin Mohammed (CEO, Project leader)
+    \item Anil Doenmez (CTO, Software and Design Architect)
+    \item Lukas Bochis (COO, Team member)
 \end{itemize}
 
-Answer the following questions when preparing this section:
+\textbf{Needed resources:}
 \begin{itemize}
-\item When will the project end?
-\item When will the project start?
-\item When will be a first prototype available?
-\item When does implementation work start?
-\item What are the big blocks of work to be done?
-\item Is this work doable in the given period of time?
-\item Do we need any other stuff to make our work (licenses, servers, É)?
+    \item Unity (Software)
+    \item Access to deep space for live testing
 \end{itemize}
-\end{explanation}
 
-\end{document}  
+\textbf{Answering of following questions:}
+\begin{itemize}
+\item \textbf{When will the project end?}
+The project will end in October 2020.
+\item \textbf{When will the project start?}
+The project will start on 05.11.2019
+\item \textbf{When will be a first prototype available?}
+The first prototype will be available on January 17.
+\item \textbf{When does implementation work start?} 
+31.10.2019
+\item \textbf{What are the big blocks of work to be done?} Understanding the the system that the AEC uses.
+Learn Unity and the work space around it.
+\item \textbf{Is this work doable in the given period of time?} Yes. There is enough time given so we can perfect the project. If the project will not be finished before summer break, we will also get time in the winter semester of the next year.
+\item \textbf{Do we need any other stuff to make our work (licenses, servers, ...)?}\newline
+Simplifies our job: Image materials for visualising components
+\end{itemize}
+
+\end{document}
